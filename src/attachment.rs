@@ -2,6 +2,7 @@ use crate::weapon::Weapon;
 
 pub struct Attachment {
 	variant: AttachmentType,
+	tuning: Option<Tuning>,
 }
 
 pub enum AttachmentType {
@@ -12,4 +13,9 @@ pub enum AttachmentType {
 	Receiver,
 	Laser,
 	Magazine,
+}
+
+pub struct Tuning {
+	x: f64,
+	y: f64,
 }
