@@ -1,4 +1,4 @@
-use crate::wepon::Weapon;
+use crate::weapon::Weapon;
 
 pub struct Attachment {
 	variant: AttachmentType,

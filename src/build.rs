@@ -1,5 +1,5 @@
 use crate::attachment::Attachment;
-use crate::wepon::Weapon;
+use crate::weapon::Weapon;
 
 pub struct Build {
 	base: Weapon,
