@@ -1,4 +1,4 @@
-mod build;
-mod attachment;
-mod weapon;
-mod unlock;
+pub mod build;
+pub mod attachment;
+pub mod weapon;
+pub mod unlock;

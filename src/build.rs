@@ -6,6 +6,11 @@ pub struct Build {
 	attachments: [Attachment; 5],
 }
 
+pub struct Blueprint {
+	name: String,
+	build: Build,
+}
+
 pub enum WeaponClass {
 	AssaultRifle,
 	BattleRifle,

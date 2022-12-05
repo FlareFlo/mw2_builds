@@ -1,27 +1,28 @@
 use std::fmt::{Display, Formatter};
 use crate::weapon::Weapon;
 
-pub enum UnlockType {
+/// Type of requirement needed to unlock
+pub enum UnlockRequirement {
 	PlayerLevel(usize),
 	Weapon(Weapon, usize),
 	Custom(String),
 	Unknown,
 }
 
-impl Display for UnlockType {
+impl Display for UnlockRequirement {
 	fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
 		write!(f, "{}",
 			match self {
-				UnlockType::PlayerLevel(level) => {
+				UnlockRequirement::PlayerLevel(level) => {
 					format!("Your player level needs to be a minimum of {level}")
 				}
-				UnlockType::Weapon(weapon, level) => {
+				UnlockRequirement::Weapon(weapon, level) => {
 					format!("You have to progress {} to level {}", weapon.to_string(), level)
 				}
-				UnlockType::Custom(custom_text) => {
+				UnlockRequirement::Custom(custom_text) => {
 					custom_text.clone()
 				}
-				UnlockType::Unknown => {
+				UnlockRequirement::Unknown => {
 					"Unknown unlock requirement".to_owned()
 				}
 			}
