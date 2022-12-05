@@ -13,6 +13,10 @@ pub enum AttachmentType {
 	Receiver,
 	Laser,
 	Magazine,
+	Guard,
+	RearGrip,
+	Grip,
+	Stock,
 }
 
 pub struct Tuning {
