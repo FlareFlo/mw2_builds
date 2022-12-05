@@ -2,6 +2,7 @@ use crate::weapon::Weapon;
 
 pub struct Attachment {
 	variant: AttachmentType,
+	// Not every part has tuning
 	tuning: Option<Tuning>,
 }
 
@@ -19,6 +20,7 @@ pub enum AttachmentType {
 	Stock,
 }
 
+// Not sure how to represent this, floats are probably best right now
 pub struct Tuning {
 	x: f64,
 	y: f64,
